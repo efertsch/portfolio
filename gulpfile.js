@@ -93,7 +93,7 @@ gulp.task('build', function(callback){
 
 //Default task allows you to just type 'gulp' to run 
 gulp.task('default', function(callback){
-  runSequence(['sass', 'browserSync', 'Watch'],
+  runSequence(['sass', 'browserSync', 'watch'],
   callback
   )
 })
