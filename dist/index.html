@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html>
+<html lang="en" dir="ltr">
 <head>
     <meta charset="utf-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -14,20 +14,22 @@
 
     <!-- Status Bar Style (see Supported Meta Tags below for available values) -->
     <meta name="apple-mobile-web-app-status-bar-style" content="black">
+
+    <meta rel="canonical">
     
     
     <link rel="stylesheet" type="text/css" media="screen" href="main.css" />
     <script src="main.js"></script>
 </head>
 <body>
-    <div class="wrapper">
+    <div class="grid-wrapper">
         <header>
             <nav class="navigation">
                 <ul>
-                    <li class="navigation__item"><a class="navigation__link" id="logo" href="#">Logo</a></li>
-                    <li class="navigation__item"><a class="navigation__link" href="#">About</a></li>
-                    <li class="navigation__item"><a class="navigation__link" href="#">Work</a></li>
-                    <li class="navigation__item"><a class="navigation__link" href="#">Contact</a></li>
+                    <li class="navigation__item"><a class="navigation__link navigation__link--hover" id="logo" href="#">Logo</a></li>
+                    <li class="navigation__item"><a class="navigation__link navigation__link--hover" href="#">About</a></li>
+                    <li class="navigation__item"><a class="navigation__link navigation__link--hover" href="#">Work</a></li>
+                    <li class="navigation__item"><a class="navigation__link navigation__link--hover" href="#">Contact</a></li>
                 </ul>
             </nav>   
         </header>
@@ -53,7 +55,7 @@
                     <img class="about__image" src="#" alt="profile image">
                     <p class="about__description"></p>
                     <p class="about__description"></p>
-                    <button class="about__resume_download"></button>
+                    <button class="about__resume-download"></button>
                 </section> <!-- End about section-->
 
                 <section class="portfolio">
@@ -92,9 +94,9 @@
                 <p class="contact__description"></p>
             </section>
             <section class="social">
-                <i class="social__icon"></i>
-                <i class="social__icon"></i>
-                <i class="social__icon"></i>
+                <i class="social__icon social__icon--hover"></i>
+                <i class="social__icon social__icon--hover"></i>
+                <i class="social__icon social__icon--hover"></i>
             </section>
         </footer> <!-- End footer-->
 
