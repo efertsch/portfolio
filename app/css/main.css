@@ -16,9 +16,19 @@ h6 {
 
 .grid-wrapper {
   display: grid;
-  grid-template-columns: repeat(1, 1fr);
-  grid-template-rows: 100px repeat(3, 1fr); }
+  grid-template: repeat(4, 1fr)/repeat(2, 1fr);
+  grid-gap: 1em; }
+
+.navigation {
+  background-color: aquamarine;
+  grid-column: auto / -1;
+  grid-row: auto; }
 
 .navigation__item {
-  list-style: none;
+  display: inline-block;
+  list-style: none; }
+
+.navigation__link {
   text-decoration: none; }
+  .navigation__link:hover {
+    text-decoration: underline; }
