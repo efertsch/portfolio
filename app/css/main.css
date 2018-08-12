@@ -149,13 +149,13 @@ p {
     .intro__heading::before, .intro__heading::after {
       content: '';
       display: block;
-      width: 60%;
+      width: 40%;
       height: 1px;
-      background-color: #002A3277; }
+      background-color: #002A3244; }
     .intro__heading::before {
-      margin: 0 auto 2.5em; }
+      margin: 0 auto 3em; }
     .intro__heading::after {
-      margin: 2.5em auto 0; }
+      margin: 3.5em auto 0; }
     .intro__heading .intro__text {
       font-weight: 400;
       font-family: "Vollkorn", serif;
