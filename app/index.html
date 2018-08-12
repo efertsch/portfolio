@@ -23,7 +23,7 @@
     <script src="main.js"></script>
 </head>
 <body>
-    <header class="header">
+    <!-- <header class="header">
         <nav class="navigation">
             <ul>
                 <li class="navigation__item"><a class="navigation__link navigation__link--hover" id="logo" href="#">Logo</a></li>
@@ -32,89 +32,92 @@
                 <li class="navigation__item"><a class="navigation__link navigation__link--hover" href="#">Contact</a></li>
             </ul>
         </nav> 
-    </header>  
+    </header>   -->
 
-    <main>
-        <section class="intro">
-            <header>
-                <h1 class="intro__header">Hi there, I'm Ethan.</h1> 
-            </header>
-            <p class="intro__description">
-                I am an enthusiastic web developer with a special interest in UX looking for new and challenging opportunities in the Greater Boston Area. 
-                I spend my days making hard cider and leading lab ops at <a class="intro__link intro__link--hover" href="https://www.farfromthetreecider.com">Far From The Tree Craft Cider</a>
-                and my evenings working on a wide variety of <a class="intro__link intro__link--hover" href="#"> personal </a> and <a class="intro__link intro__link--hover" href="#"> client projects </a>. 
-            </p>
-        </section> <!-- End intro section-->
+    <div class="container">
+        <main>
+            <section class="intro">
+                <header>
+                    <h1 class="intro__header">Hi, I'm <span class="intro__header intro__header--accent">Ethan</span>.</h1> 
+                </header>
+                <p class="intro__description">
+                    I am an enthusiastic web developer with a special interest in front-end and UX looking for new and challenging opportunities in the Greater Boston Area. 
+                    I spend my days making hard cider and leading lab ops at <a class="intro__link" href="https://www.farfromthetreecider.com">Far From The Tree Craft Cider</a>
+                    and my evenings working on a wide variety of personal and <a class="intro__link" href="#portfolio"> client projects </a>. <span><a class="intro__link" href="#about">Learn More.</a></span>
+                </p>
+            </section> <!-- End intro section-->
 
-        <section class="about">
-            <header>
-                <h1 class="about__title">Profile</h1>
-            </header>
-            <img class="about__image" src="#" alt="profile image">
-            <p class="about__description"></p>
-            <p class="about__description"></p>
-            <button class="about__resume-download"></button>
-        </section> <!-- End about section-->
+            <section id="about" class="about">
+                <header>
+                    <h1 class="about__title">Profile</h1>
+                </header>
+                <img class="about__image" src="#" alt="profile image">
+                <p class="about__description"></p>
+                <p class="about__description"></p>
+                <button class="about__resume-download"></button>
+            </section> <!-- End about section-->
 
-        <section class="portfolio">
-            <header>
-                <h1 class="portfolio__title"></h1>
-            </header>
-            <div class="portfolio__items">
-                <figure class="portfolio__item">
-                    <img class="portfolio__image" src="#" alt="portfolio image 1">
-                    <figcaption>
-                        <h2 class="portfolio__item_title">Project Name</h2>
-                        <p class="portfolio__item_desc">A short description could go right here</p>
-                        <a href="#" class="portfolio__item_link">More info</a>
-                    </figcaption>
-                </figure>
-                <figure class="portfolio__item">
-                    <img class="portfolio__image" src="#" alt="portfolio image 2">
-                    <figcaption>
-                        <h2 class="portfolio__item-title">Project Name</h2>
-                        <p class="portfolio__item-desc">A short description could go right here</p>
-                        <a href="#" class="portfolio__item-link">More info</a>
-                    </figcaption>
-                </figure>
-                <figure class="portfolio__item">
-                    <img class="portfolio__image" src="#" alt="portfolio image 3">
-                    <figcaption>
-                        <h2 class="portfolio__item-title">Project Name</h2>
-                        <p class="portfolio__item-desc">A short description could go right here</p>
-                        <a href="#" class="portfolio__item-link">More info</a>
-                    </figcaption>
-                </figure>
-                <figure class="portfolio__item">
-                    <img class="portfolio__image" src="#" alt="portfolio image 4">
-                    <figcaption>
-                        <h2 class="portfolio__item-title">Project Name</h2>
-                        <p class="portfolio__item-desc">A short description could go right here</p>
-                        <a href="#" class="portfolio__item-link">More info</a>
-                    </figcaption>
-                </figure>
-                <figure class="portfolio__item">
-                    <img class="portfolio__image" src="#" alt="portfolio image 5">
-                    <figcaption>
-                        <h2 class="portfolio__item-title">Project Name</h2>
-                        <p class="portfolio__item-desc">A short description could go right here</p>
-                        <a href="#" class="portfolio__item-link">More info</a>
-                    </figcaption>
-                </figure>
-            </div>
-        </section> <!-- End portfolio section-->
-    </main> <!-- End main content -->
+            <section id="portfolio" class="portfolio">
+                <header>
+                    <h1 class="portfolio__title"></h1>
+                </header>
+                <div class="portfolio__items">
+                    <figure class="portfolio__item">
+                        <img class="portfolio__image" src="#" alt="portfolio image 1">
+                        <figcaption>
+                            <h2 class="portfolio__item_title">Project Name</h2>
+                            <p class="portfolio__item_desc">A short description could go right here</p>
+                            <a href="#" class="portfolio__item_link">More info</a>
+                        </figcaption>
+                    </figure>
+                    <figure class="portfolio__item">
+                        <img class="portfolio__image" src="#" alt="portfolio image 2">
+                        <figcaption>
+                            <h2 class="portfolio__item-title">Project Name</h2>
+                            <p class="portfolio__item-desc">A short description could go right here</p>
+                            <a href="#" class="portfolio__item-link">More info</a>
+                        </figcaption>
+                    </figure>
+                    <figure class="portfolio__item">
+                        <img class="portfolio__image" src="#" alt="portfolio image 3">
+                        <figcaption>
+                            <h2 class="portfolio__item-title">Project Name</h2>
+                            <p class="portfolio__item-desc">A short description could go right here</p>
+                            <a href="#" class="portfolio__item-link">More info</a>
+                        </figcaption>
+                    </figure>
+                    <figure class="portfolio__item">
+                        <img class="portfolio__image" src="#" alt="portfolio image 4">
+                        <figcaption>
+                            <h2 class="portfolio__item-title">Project Name</h2>
+                            <p class="portfolio__item-desc">A short description could go right here</p>
+                            <a href="#" class="portfolio__item-link">More info</a>
+                        </figcaption>
+                    </figure>
+                    <figure class="portfolio__item">
+                        <img class="portfolio__image" src="#" alt="portfolio image 5">
+                        <figcaption>
+                            <h2 class="portfolio__item-title">Project Name</h2>
+                            <p class="portfolio__item-desc">A short description could go right here</p>
+                            <a href="#" class="portfolio__item-link">More info</a>
+                        </figcaption>
+                    </figure>
+                </div>
+            </section> <!-- End portfolio section-->
+        </main> <!-- End main content -->
 
-    <footer>
-        <section class="contact">
-            <p class="contact__description"> Have an idea for how we can make something awesome together? Let's grab a drink, talk shop over lunch, or if you prefer a more traditional approach shoot me and <a href="mailto:efertsch@gmail.com">email</a> or find me on <a href="https://www.linkedin.com/in/ethan-fertsch">linkedin.</a> </p>
-        </section>
-        <section class="social">
-            <i class="social__icon social__icon--hover fa fa-github" aria-hidden="true"></i>
-            <i class="social__icon social__icon--hover fa fa-linkedin" aria-hidden="true"></i>
-            <!-- <i class="social__icon social__icon--hover"></i> -->
-        </section>
-    </footer> <!-- End footer-->
+        <footer>
+            <section class="contact">
+                <p class="contact__description"> Have an idea for how we can make something awesome together? Let's grab a drink, talk shop over lunch, or if you prefer a more traditional approach shoot me and <a href="mailto:efertsch@gmail.com">email</a> or find me on <a href="https://www.linkedin.com/in/ethan-fertsch">linkedin.</a> </p>
+            </section>
+            <section class="social">
+                <i class="social__icon social__icon--hover fa fa-github" aria-hidden="true"></i>
+                <i class="social__icon social__icon--hover fa fa-linkedin" aria-hidden="true"></i>
+            </section>
+        </footer> <!-- End footer-->
+
+    </div> <!-- End container-->
+
     <script src="https://use.fontawesome.com/09bd5cc1fc.js"></script>
 </body>
 </html>

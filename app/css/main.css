@@ -131,3 +131,28 @@ body {
   color: #002A32;
   background-color: #fff;
   font-family: "Vollkorn", serif; }
+
+h1 {
+  font-family: "Open Sans", sans-serif; }
+
+p {
+  font-size: 2rem; }
+
+.intro {
+  background: #FCFAFA;
+  height: 100vh;
+  display: flex; }
+  .intro__header {
+    font-size: 1rem; }
+    .intro__header--accent {
+      color: #6E8387; }
+  .intro__description {
+    line-height: 1.5; }
+    .intro__description .intro__link {
+      text-decoration: none;
+      color: #002A32;
+      border-bottom: 1px dotted #002A32; }
+      .intro__description .intro__link:hover {
+        border-bottom: 1px solid #002A32; }
+    .intro__description span {
+      display: block; }

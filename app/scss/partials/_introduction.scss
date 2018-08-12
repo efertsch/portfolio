@@ -1,0 +1,25 @@
+.intro {
+    background: $background-primary;
+    height: 100vh;
+    display: flex;
+    &__header {
+        font-size: 1rem;
+        &--accent {
+            color: $text-secondary;
+        }
+    }
+    &__description {
+        line-height: 1.5;
+        .intro__link {
+            text-decoration: none;
+            color: $text-primary;
+            border-bottom: 1px dotted $text-primary;
+            &:hover {
+                border-bottom: 1px solid $text-primary;
+            }
+        }
+        span {
+            display: block;
+        }
+    }
+}
