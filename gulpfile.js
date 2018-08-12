@@ -41,7 +41,6 @@ gulp.task('watch', ['browserSync', 'sass'], function(){
 //Initialize a server in the root directory
 gulp.task('browserSync', function(){
   browserSync.init({
-    browser: 'firefox', //does not open as default
     server: {
       baseDir: 'app'
     },
