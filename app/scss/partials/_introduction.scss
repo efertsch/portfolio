@@ -6,20 +6,6 @@
     justify-content: center;
     &__heading {
         width: 60vw;
-        // &::before,
-        // &::after {
-        //     content: '';
-        //     display: block;
-        //     width: 50%;
-        //     height: 1px;
-        //     background-color: rgba($text-primary, .4); 
-        // }
-        // &::before{
-        //     margin: 0 auto 3em;
-        // }
-        // &::after {
-        //     margin: 3em auto 0;
-        // }
         .intro__text {
             font-weight: 400;
             font-family: $ff-text;
@@ -35,6 +21,12 @@
                 &:hover {
                     border-bottom: 1px solid $text-primary;
                 }
+            }
+            @media (min-width:720px) and (max-width:950px){
+                font-size: 1.2rem;
+            }
+            @media (max-width: 720px){
+                font-size: .875rem;
             }
         }
     }

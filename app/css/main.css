@@ -159,6 +159,12 @@ p {
         border-bottom: 1px dotted #002A32; }
         .intro__heading .intro__text .intro__link:hover {
           border-bottom: 1px solid #002A32; }
+      @media (min-width: 720px) and (max-width: 950px) {
+        .intro__heading .intro__text {
+          font-size: 1.2rem; } }
+      @media (max-width: 720px) {
+        .intro__heading .intro__text {
+          font-size: .875rem; } }
 
 .about {
   display: flex;
