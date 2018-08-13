@@ -1,0 +1,42 @@
+.intro {
+    background: $background-primary;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    &__heading {
+        width: 60vw;
+        &::before,
+        &::after {
+            content: '';
+            display: block;
+            width: 40%;
+            height: 1px;
+            background-color: #002A3244; 
+        }
+        &::before{
+            margin: 0 auto 3em;
+        }
+        &::after {
+            margin: 3.5em auto 0;
+        }
+        .intro__text {
+            font-weight: 400;
+            font-family: $ff-text;
+            line-height: 1.5;
+            text-align: center;
+            &--accent{
+                color: $text-secondary;
+            }
+            .intro__link {
+                text-decoration: none;
+                color: $text-primary;
+                border-bottom: 1px dotted $text-primary;
+                &:hover {
+                    border-bottom: 1px solid $text-primary;
+                }
+            }
+        }
+    }
+
+}
