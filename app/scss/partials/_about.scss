@@ -1,0 +1,25 @@
+.about {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    &__title {
+        display: block;
+        width: 40%;
+        text-align: center;
+        text-decoration-line: underline;
+        font-weight: 400;
+    }
+    &__image{
+        align-self: center;
+        border-radius: 50%;
+    }
+    &__description{
+        width: 30%;
+        font-size: 1rem;
+        line-height: 1.75;
+        &--subtitle {
+            display: block;
+            color: $text-secondary;
+        }
+    }
+}

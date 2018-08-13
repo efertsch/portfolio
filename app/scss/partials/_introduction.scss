@@ -6,20 +6,20 @@
     justify-content: center;
     &__heading {
         width: 60vw;
-        &::before,
-        &::after {
-            content: '';
-            display: block;
-            width: 40%;
-            height: 1px;
-            background-color: rgba($text-primary, .4); 
-        }
-        &::before{
-            margin: 0 auto 3em;
-        }
-        &::after {
-            margin: 3.5em auto 0;
-        }
+        // &::before,
+        // &::after {
+        //     content: '';
+        //     display: block;
+        //     width: 50%;
+        //     height: 1px;
+        //     background-color: rgba($text-primary, .4); 
+        // }
+        // &::before{
+        //     margin: 0 auto 3em;
+        // }
+        // &::after {
+        //     margin: 3em auto 0;
+        // }
         .intro__text {
             font-weight: 400;
             font-family: $ff-text;
