@@ -19,11 +19,22 @@ var gulp = require('gulp'),
     runSequence = require('run-sequence');
 
 
+// var autoprefixerOptions = {
+//     browsers: ['last 2 versions', '> 5%', 'Firefox ESR']
+// };
+// var supported = [
+//   'last 2 versions',
+//   '>= 1%'
+// ];
+
 //Compile all Sass files in the root and all child directories to css
 //Update css on page reload
 gulp.task('sass', function(){
   return gulp.src('app/scss/**/*.scss')
   .pipe(sass())
+  .pipe(cssnano({
+    autoprefixer: {browsers: ['> 1%', 'last 2 versions', 'Firefox >= 20'], add: true}
+  }))
   .pipe(gulp.dest('app/css'))
   .pipe(browserSync.reload({
     stream: true
