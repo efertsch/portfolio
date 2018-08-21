@@ -22,7 +22,7 @@
                 bottom:0;
                 right:0;
                 left:0;
-                background: rgba($text-secondary, .4);
+                background: rgba($text-secondary, .7);
                 text-align: left;
                 display: flex;
                 flex-direction: column;
@@ -41,10 +41,13 @@
                 font-size: 1rem;
             }
             &-link{
-                width: 4.5em;
+                align-self: flex-start;
                 text-decoration: none;
                 border-bottom: 1px dotted $white;
                 color: $white;
+                i{
+                    margin-left: .5em;
+                }
                 &:hover{
                     border-bottom: 1px solid $white;  
                 }
