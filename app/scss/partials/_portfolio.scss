@@ -10,6 +10,8 @@
         margin-bottom: 2em;
     }
     &__items{
+        display: grid;
+        grid-template-columns: repeat(2 1fr);
         .portfolio__item{
             position: relative;
             overflow: hidden;
@@ -18,7 +20,7 @@
             }
             figcaption{
                 position: absolute;
-                top:0;
+                top:100%;
                 bottom:0;
                 right:0;
                 left:0;
@@ -27,6 +29,11 @@
                 display: flex;
                 flex-direction: column;
                 padding: 2em;
+                transition: top ease-in-out 300ms;
+            }
+            &:hover figcaption,
+            &:focus figcaption{
+                top:0;
             }
             &-title{
                 color: $white;
