@@ -13,6 +13,9 @@
         .portfolio__item{
             position: relative;
             overflow: hidden;
+            .portfolio__image{
+                display: block;
+            }
             figcaption{
                 position: absolute;
                 top:0;
@@ -23,7 +26,6 @@
                 text-align: left;
                 display: flex;
                 flex-direction: column;
-                justify-content: flex-end;
                 padding: 2em;
             }
             &-title{
@@ -32,14 +34,20 @@
                 font-family: $ff-headings;
                 text-transform: uppercase;
                 letter-spacing: 0.2rem;
+                margin-bottom: auto;
             }
             &-desc{
                 color: $white;
                 font-size: 1rem;
             }
             &-link{
+                width: 4.5em;
                 text-decoration: none;
+                border-bottom: 1px dotted $white;
                 color: $white;
+                &:hover{
+                    border-bottom: 1px solid $white;  
+                }
             }
         }
     }
