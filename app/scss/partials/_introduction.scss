@@ -1,9 +1,17 @@
 .intro {
+    position: relative;
     background: $background-primary;
     height: 100vh;
     display: flex;
     align-items: center;
     justify-content: center;
+    .menu-button{
+        border: 0;
+        background: transparent;
+        position: absolute;
+        top: 2em;
+        left: 2em;
+    }
     &__heading {
         width: 60vw;
         .intro__text {

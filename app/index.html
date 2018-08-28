@@ -23,20 +23,24 @@
     <script src="main.js"></script>
 </head>
 <body>
-    <!-- <header class="header">
+    <header class="header">
         <nav class="navigation">
             <ul>
-                <li class="navigation__item"><a class="navigation__link navigation__link--hover" id="logo" href="#">Logo</a></li>
-                <li class="navigation__item"><a class="navigation__link navigation__link--hover" href="#">About</a></li>
-                <li class="navigation__item"><a class="navigation__link navigation__link--hover" href="#">Work</a></li>
-                <li class="navigation__item"><a class="navigation__link navigation__link--hover" href="#">Contact</a></li>
+                <button class="menu-close"><i class="fa fa-times" aria-hidden="true"></i></button>
+                <li class="navigation__item"><a class="navigation__link navigation__link--hover" href="#home">Home</a></li>
+                <li class="navigation__item"><a class="navigation__link navigation__link--hover" href="#about">About</a></li>
+                <li class="navigation__item"><a class="navigation__link navigation__link--hover" href="#portfolio">Work</a></li>
+                <li class="navigation__item"><a class="navigation__link navigation__link--hover" href="#contact">Contact</a></li>
             </ul>
         </nav> 
-    </header>   -->
+    </header>  
 
     <div class="container">
         <main>
-            <section class="intro">
+            <section id="#home" class="intro">
+                <button class="menu-button">
+                    <i class="fas fa-bars fa-lg" aria-hidden="true"></i>
+                </button>
                 <div class="intro__heading">
                     <h1 class="intro__text">
                         Hi, I'm <span class="intro__text--accent">Ethan</span>. I am an enthusiastic front-end web developer and I am looking for new and challenging opportunities in the Greater Boston Area. 
@@ -115,7 +119,7 @@
         </main> <!-- End main content -->
 
         <footer>
-            <section class="contact">
+            <section id="contact" class="contact">
                 <p class="contact__description"> Interested in making something awesome together? Let's grab a drink, talk shop over lunch, or if you prefer a more traditional approach shoot me and <a class="contact__description--link" href="mailto:efertsch@gmail.com">email</a> or find me on <a class="contact__description--link" href="https://www.linkedin.com/in/ethan-fertsch">linkedin.</a> </p>
                 <section class="social">
                     <a href="https://github.com/efertsch"><i class="social__icon social__icon--hover fa fa-github" aria-hidden="true"></i></a>
@@ -128,6 +132,7 @@
 
     </div> <!-- End container-->
 
+    <script src="js/main.js"></script> 
     <script src="https://use.fontawesome.com/09bd5cc1fc.js"></script>
 </body>
 </html>

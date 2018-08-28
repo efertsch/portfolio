@@ -18,13 +18,7 @@
             position: relative;
             overflow: hidden;
             height: 18.75em;
-            flex: 1 1 15rem;
-            @media (max-width:980px){
-                width: 15.6em;
-            }
-            @media (max-width:560px){
-                width: 18.75em;
-            }
+            flex: 1 1 20rem;
             .portfolio__image{
                 width: 100%;
                 height: 100%;
