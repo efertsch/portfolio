@@ -10,10 +10,12 @@ var gulp = require('gulp'),
     sass = require('gulp-sass'),
     browserSync = require('browser-sync'),
     useref = require('gulp-useref'),
+    concat = require('gulp-concat'),  
+    rename = require('gulp-rename'),
     uglify = require('gulp-uglify'),
     gulpIf = require('gulp-if'),
     cssnano = require('gulp-cssnano'),
-    imagemin = require('gulp-imagemin'),
+    imagemin = require('gulp-imagemin'),  
     cache = require('gulp-cache'),
     del = require('del'),
     runSequence = require('run-sequence');
@@ -68,6 +70,16 @@ gulp.task('useref', function(){
     .pipe(gulpIf('*.css', cssnano()))
     .pipe(gulp.dest('dist'))
 });
+
+var jsFiles = 'assets/js/**/*.js',
+    jsDest = 'dist/js';
+
+//concatentate jsfiles
+gulp.task('scripts', function() {
+      return gulp.src(jsFiles)
+          .pipe(concat('main.js'))
+          .pipe(gulp.dest(jsDest));
+  });
 
 //Optimize and minify images with png, jpg, gif, svg ext.
 //Cache minified images -- expensive to do repeatedly
