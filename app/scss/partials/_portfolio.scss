@@ -68,3 +68,65 @@
         }
     }
 }
+
+
+.portfolio__modal {
+    position: fixed;
+    z-index: 10;
+    top: 2em;
+    bottom: 2em;
+    left: 2em;
+    right: 2em;
+    background: $white;
+    box-shadow: 0 0 0 3em rgba(black, .5);
+    overflow-y: scroll;
+    overflow-x: hidden;
+  
+    display: none;
+  
+    &.is-open {
+      display: block;
+    }
+    &-header{
+        text-align: left;
+        padding: 5em 0;
+        margin-bottom: 2em;
+        background-size: cover;
+        background-position: center;
+        position: relative;
+        .menu-close{
+            border: 0;
+            background: transparent;
+            position: absolute;
+            top: 1em;
+            right: 1em;
+            cursor: pointer;
+        }
+    }
+    .header-one{
+        background-image: url(../images/portfolio/bcd_project.jpg);
+    }
+    .modal-title-container{
+        background: rgba($text-secondary, .8);
+        padding: 3em 0 3em 2em;
+        width: 80%;
+        .portfolio__item-title{
+            font-size: 1.2rem;
+             display: inline-block;
+        }
+        .portfolio__item-desc{
+            font-size: 0.875rem;
+            display: inline-block; 
+        }
+
+    }
+    &-content {
+        p{
+            font-size: 0.875rem;
+        }  
+        text-align: left;
+        width: 85%;
+        margin: 0 auto;
+        padding-bottom: 2em;
+      }
+  }
