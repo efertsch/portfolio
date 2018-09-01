@@ -24,5 +24,8 @@
     "gulp-useref": "^3.1.5",
     "run-sequence": "^2.2.1",
     "sass": "^1.10.0"
+  },
+  "dependencies": {
+    "jump.js": "^1.0.2"
   }
 }
