@@ -71,7 +71,7 @@ gulp.task('useref', function(){
     .pipe(gulp.dest('dist'))
 });
 
-var jsFiles = 'assets/js/**/*.js',
+var jsFiles = 'app/js/**/*.js',
     jsDest = 'dist/js';
 
 //concatentate jsfiles
