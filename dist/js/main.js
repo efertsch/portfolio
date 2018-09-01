@@ -1,7 +1,7 @@
 
-const openMenuButton = document.querySelector('.menu-button');
-const closeMenuButton = document.querySelector('.menu-close');
-const menuLinks = document.querySelectorAll('.navigation__link');
+var openMenuButton = document.querySelector('.menu-button');
+var closeMenuButton = document.querySelector('.menu-close');
+var menuLinks = document.querySelectorAll('.navigation__link');
 
 
 function addBodyClass(className){
@@ -13,12 +13,12 @@ function removeBodyClass(className){
 }
 
 function openNav(button, className){
-    button.addEventListener("click", () => {
+    button.addEventListener("click", function() {
         addBodyClass(className);
     });
 }
 function closeNav(button, className){
-    button.addEventListener("click", () => {
+    button.addEventListener("click", function() {
         removeBodyClass(className);
     });
 }
@@ -29,7 +29,7 @@ function toggleNav(){
 
 function closeNavOnScroll(links, className){
     links.forEach(function(link){
-       link.addEventListener("click", () => {
+       link.addEventListener("click", function() {
             removeBodyClass(className);
         });
     })

@@ -5,6 +5,11 @@
 //     .pipe(gulp.dest('destination'))
 // });
 
+//Debugging 
+// .pipe(<pluginName>().on('error', function(e){
+//   console.log(e);
+// }))
+
 //Require plugins
 var gulp = require('gulp'),
     sass = require('gulp-sass'),
@@ -19,15 +24,6 @@ var gulp = require('gulp'),
     cache = require('gulp-cache'),
     del = require('del'),
     runSequence = require('run-sequence');
-
-
-// var autoprefixerOptions = {
-//     browsers: ['last 2 versions', '> 5%', 'Firefox ESR']
-// };
-// var supported = [
-//   'last 2 versions',
-//   '>= 1%'
-// ];
 
 //Compile all Sass files in the root and all child directories to css
 //Update css on page reload
@@ -61,7 +57,6 @@ gulp.task('browserSync', function(){
 })
 
 //Find all html files in app, look for scripts and concatinate with useref plugin
-//Minify js with uglify plugin
 //Concat and minify css with cssnano plugin
 gulp.task('useref', function(){
   return gulp.src('app/*.html')
@@ -74,11 +69,14 @@ gulp.task('useref', function(){
 var jsFiles = 'app/js/**/*.js',
     jsDest = 'dist/js';
 
-//concatentate jsfiles
+//concatentate and minifiy jsfiles
 gulp.task('scripts', function() {
       return gulp.src(jsFiles)
-          .pipe(concat('main.js'))
-          .pipe(gulp.dest(jsDest));
+        .pipe(concat('main.js'))
+        .pipe(gulp.dest(jsDest))
+        .pipe(rename('main.min.js'))
+        .pipe(uglify())
+        .pipe(gulp.dest(jsDest));
   });
 
 //Optimize and minify images with png, jpg, gif, svg ext.
@@ -109,7 +107,7 @@ gulp.task('cache:clear', function(callback){
 
 //Combine all tasks and run on build
 gulp.task('build', function(callback){
-  runSequence('clean:dist', ['sass', 'useref', 'images', 'fonts'],
+  runSequence('clean:dist', ['sass', 'useref', 'images', 'fonts', 'scripts'],
   callback
   )
 })
