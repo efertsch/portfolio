@@ -1,3 +1,15 @@
+.container {
+    position: relative; 
+    #modal-backdrop{
+        height: 100%;
+        width: 100%;
+        position: absolute;  
+        background: rgba(black, 0.5);
+        display: none;
+        z-index: 9;
+    }
+}
+
 .portfolio{
     text-align: center;
     background-color: $background-primary;
@@ -71,6 +83,8 @@
 
 
 .portfolio__modal {
+    max-width: 600px;
+    margin: 0 auto;
     position: fixed;
     z-index: 10;
     top: 2em;
@@ -78,7 +92,7 @@
     left: 2em;
     right: 2em;
     background: $white;
-    box-shadow: 0 0 0 3em rgba(black, .5);
+    // box-shadow: 0 0 0 3em rgba(black, .5);
     overflow-y: scroll;
     overflow-x: hidden;
     display: none;
@@ -86,6 +100,7 @@
     &.is-open {
       display: block;
     }
+    
     &-header{
         text-align: left;
         padding: 5em 0;
@@ -124,18 +139,9 @@
             font-size: 0.875rem;
         }  
         text-align: left;
-        width: 85%;
+        width: 75%;
         margin: 0 auto;
         padding-bottom: 2em;
       }
   }
 
-  @keyframes modalIn {
-    0% { opacity: 0; }
-    100% { opacity: 1; }
-  }
-  
-  @keyframes modalOut {
-    0% { opacity: 1; }
-    100% { opacity: 0; }
-  }
