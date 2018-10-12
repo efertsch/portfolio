@@ -2,7 +2,7 @@ var portfolioItems = document.querySelector('.portfolio__items');
 
 portfolioItems.addEventListener('click', function(e){
 
-    var modalToggle = e.target.closest('.portfolio__item-link');
+    var modalToggle = e.target.closest('.portfolio__item-button');
     
     if (! modalToggle ) return
 
@@ -25,6 +25,6 @@ portfolioItems.addEventListener('click', function(e){
         modal.classList.remove('is-open')
         backdrop.style.display = 'none';
       })
-      
+
     openModal(); 
 });
