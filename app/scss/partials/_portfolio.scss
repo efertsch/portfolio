@@ -1,3 +1,15 @@
+.container {
+    position: relative; 
+    #modal-backdrop{
+        height: 100%;
+        width: 100%;
+        position: absolute;  
+        background: rgba(black, 0.5);
+        display: none;
+        z-index: 9;
+    }
+}
+
 .portfolio{
     text-align: center;
     background-color: $background-primary;
@@ -53,18 +65,111 @@
                 color: $white;
                 font-size: 1rem;
             }
-            &-link{
+            &-button{
                 align-self: flex-start;
-                text-decoration: none;
-                border-bottom: 1px dotted $white;
+                background: transparent;
                 color: $white;
+                padding: 1em;
+                border-radius: 5%;
                 i{
                     margin-left: .5em;
                 }
                 &:hover{
-                    border-bottom: 1px solid $white;  
+                    background: $white;
+                    color: $text-primary;  
                 }
             }
         }
     }
 }
+
+
+.portfolio__modal {
+    max-width: 600px;
+    margin: 0 auto;
+    position: fixed;
+    z-index: 10;
+    top: 2em;
+    bottom: 2em;
+    left: 2em;
+    right: 2em;
+    background: $white;
+    // box-shadow: 0 0 0 3em rgba(black, .5);
+    overflow-y: scroll;
+    overflow-x: hidden;
+    display: none;
+  
+    &.is-open {
+      display: block;
+    }
+    
+    &-header{
+        text-align: left;
+        padding: 5em 0;
+        margin-bottom: 2em;
+        background-size: cover;
+        background-position: center;
+        position: relative;
+        .menu-close{
+            border: 0;
+            background: transparent;
+            position: absolute;
+            top: 1em;
+            right: 1em;
+            cursor: pointer;
+        }
+    }
+    .header-one{
+        background-image: url(../images/portfolio/bcd_project.jpg);
+    }
+    .header-two{
+        background-image: url(../images/portfolio/maitland_project.jpg);
+    }
+    .header-three{
+        background-image: url(../images/portfolio/core_project.jpg);
+    }
+    .header-four{
+        background-image: url(../images/portfolio/swat_project.jpg);
+    }
+    .header-five{
+        background-image: url(../images/portfolio/codeconnect_project.jpg);
+    }
+    .header-six{
+        background-image: url(../images/portfolio/rgb_game_project.jpg);
+    }
+    .modal-title-container{
+        background: rgba($text-secondary, .8);
+        padding: 3em 0 3em 2em;
+        width: 80%;
+        .portfolio__item-title{
+            font-size: 1.2rem;
+             display: inline-block;
+        }
+        .portfolio__item-desc{
+            font-size: 0.875rem;
+            display: inline-block; 
+        }
+
+    }
+    &-content {
+        p{       
+            font-size: 1rem;
+            @media (max-width: 580px) {
+                font-size: 0.875rem;
+            }
+            a {
+                color: $text-primary;
+                text-decoration: none;
+                border-bottom: 1px dotted;
+                &:hover {
+                    border-bottom: 1px solid;
+                }
+            }
+        }  
+        text-align: left;
+        width: 75%;
+        margin: 0 auto;
+        padding-bottom: 2em;
+      }
+  }
+

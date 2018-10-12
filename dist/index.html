@@ -19,13 +19,13 @@
     
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.2.0/css/all.css" integrity="sha384-hWVjflwFxL6sNzntih27bfxkr27PmbbK/iSvJ+a4+0owXq79v+lsFkW54bOGbiDQ" crossorigin="anonymous">    
     <link rel="stylesheet" type="text/css" media="screen" href="css/main.css" />
-    
-    <script src="main.js"></script>
+
 </head>
 <body>
     <header class="header">
         <nav class="navigation">
             <ul>
+                <button class="menu-close"><i class="fa fa-times" aria-hidden="true"></i></button>
                 <li class="navigation__item"><a class="navigation__link navigation__link--hover" href="#home">Home</a></li>
                 <li class="navigation__item"><a class="navigation__link navigation__link--hover" href="#about">About</a></li>
                 <li class="navigation__item"><a class="navigation__link navigation__link--hover" href="#portfolio">Work</a></li>
@@ -35,6 +35,7 @@
     </header>  
 
     <div class="container">
+        <div id="modal-backdrop"></div>
         <main>
             <section id="#home" class="intro">
                 <button class="menu-button">
@@ -67,15 +68,33 @@
                 <div class="portfolio__items">
                     <figure class="portfolio__item">
                         <img class="portfolio__image featured" src="/images/portfolio/bcd_project.jpg" alt="portfolio image 1">
-                        <figcaption>
+                        <figcaption class="portfolio__caption">
                             <h2 class="portfolio__item-title">Backcourt Dribble</h2>
                             <p class="portfolio__item-desc">A platform for boosting fan egagement in women's sports</p>
-                            <a href="#" class="portfolio__item-link">More info<i class="fa fa-arrow-circle-o-right" aria-hidden="true"></i></a>
+                            <button class="portfolio__item-link">More info<i class="fa fa-arrow-circle-o-right" aria-hidden="true"></i></button>
                         </figcaption>
+
+                        <!-- Portfolio modal 1 -->
+                        <div class="portfolio__modal">
+                            <div class="portfolio__modal-header header-one">
+                            <button class="menu-close"><i class="fa fa-times fa-2x" aria-hidden="true"></i></button>
+                                <div class="modal-title-container">
+                                    <h2 class="portfolio__item-title">Backcourt Dribble</h2>
+                                    <p class="portfolio__item-desc">A platform for boosting fan egagement in women's sports</p>
+                                </div>
+                            </div>
+                            <div class="portfolio__modal-content">
+                                <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec qu</p>
+                                <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec qu</p>
+                            </div>
+                        </div> 
+                        <!-- /Portfolio modal 1 -->
+
                     </figure>
+
                     <figure class="portfolio__item">
                         <img class="portfolio__image" src="/images/portfolio/maitland_project.jpg" alt="portfolio image 2">
-                        <figcaption>
+                        <figcaption class="portfolio__caption">
                             <h2 class="portfolio__item-title">Maitland Mountain Farm</h2>
                             <p class="portfolio__item-desc">A site for a local urban farm and pickling company</p>
                             <a href="#" class="portfolio__item-link">More info<i class="fa fa-arrow-circle-o-right" aria-hidden="true"></i></a>
@@ -83,7 +102,7 @@
                     </figure>
                     <figure class="portfolio__item">
                         <img class="portfolio__image" src="/images/portfolio/codeconnect_project.jpg" alt="portfolio image 3">
-                        <figcaption>
+                        <figcaption class="portfolio__caption">
                             <h2 class="portfolio__item-title">Code Connect</h2>
                             <p class="portfolio__item-desc">A job board that connects bootcamp graduates to employers</p>
                             <a href="#" class="portfolio__item-link">More info<i class="fa fa-arrow-circle-o-right" aria-hidden="true"></i></a>
@@ -91,7 +110,7 @@
                     </figure>
                     <figure class="portfolio__item">
                         <img class="portfolio__image" src="/images/portfolio/patatap_clone_project.jpg" alt="portfolio image 4">
-                        <figcaption>
+                        <figcaption class="portfolio__caption">
                             <h2 class="portfolio__item-title">Patatap Clone</h2>
                             <p class="portfolio__item-desc">A simple app that explores fun with keystokes, sound, and animation</p>
                             <a href="#" class="portfolio__item-link">More info<i class="fa fa-arrow-circle-o-right" aria-hidden="true"></i></a>
@@ -99,7 +118,7 @@
                     </figure>
                     <figure class="portfolio__item">
                         <img class="portfolio__image" src="/images/portfolio/rgb_game_project.jpg" alt="portfolio image 5">
-                        <figcaption>
+                        <figcaption class="portfolio__caption">
                             <h2 class="portfolio__item-title">RGB Color Game</h2>
                             <p class="portfolio__item-desc">A color matching game that helps users understand rgb values</p>
                             <a href="#" class="portfolio__item-link">More info<i class="fa fa-arrow-circle-o-right" aria-hidden="true"></i></a>
@@ -107,7 +126,7 @@
                     </figure>
                     <figure class="portfolio__item">
                         <img class="portfolio__image" src="/images/portfolio/swat_project.jpg" alt="portfolio image 6">
-                        <figcaption>
+                        <figcaption class="portfolio__caption">
                             <h2 class="portfolio__item-title">Swat</h2>
                             <p class="portfolio__item-desc">A app that crowd sources greenhead fly sightings along the Massachusetts coast</p>
                             <a href="#" class="portfolio__item-link">Coming soon<i class="fas fa-wrench" aria-hidden="true"></i></a>
@@ -115,6 +134,7 @@
                     </figure>
                 </div>
             </section> <!-- End portfolio section-->
+
         </main> <!-- End main content -->
 
         <footer>
@@ -130,7 +150,9 @@
         </footer> <!-- End footer-->
 
     </div> <!-- End container-->
-
+    <script src="js/nav.js"></script> 
+    <script src="js/modal.js"></script> 
+    <!-- <script src="dist/js/main.min.js"></script>  -->
     <script src="https://use.fontawesome.com/09bd5cc1fc.js"></script>
 </body>
 </html>
