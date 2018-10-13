@@ -26,6 +26,7 @@
         }
     }
     .social{
+        position: relative;
         &__icon{
             color: $text-primary;
             margin: 0.5em;
@@ -38,4 +39,5 @@
         }
         
     }
+    
 }
