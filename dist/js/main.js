@@ -8,6 +8,7 @@ portfolioItems.addEventListener('click', function(e){
 
     var modal = modalToggle.parentNode.nextElementSibling;
     var closeButton = modal.querySelector('.menu-close');
+    var closeButtonBottom = modal.querySelector('.menu-close2');
     var backdrop = document.querySelector('#modal-backdrop');
 
     
@@ -24,7 +25,12 @@ portfolioItems.addEventListener('click', function(e){
     closeButton.addEventListener('click', function() {
         modal.classList.remove('is-open')
         backdrop.style.display = 'none';
-      })
+    })
+
+    closeButtonBottom.addEventListener('click', function() {
+        modal.classList.remove('is-open')
+        backdrop.style.display = 'none';
+    })
 
     openModal(); 
 });
