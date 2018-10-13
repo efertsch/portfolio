@@ -67,6 +67,7 @@
             }
             &-button{
                 align-self: flex-start;
+                text-transform: uppercase;
                 background: transparent;
                 color: $white;
                 padding: 1em;
@@ -94,7 +95,7 @@
     left: 2em;
     right: 2em;
     background: $white;
-    // box-shadow: 0 0 0 3em rgba(black, .5);
+    border-radius: 1%;
     overflow-y: scroll;
     overflow-x: hidden;
     display: none;
@@ -120,22 +121,22 @@
         }
     }
     .header-one{
-        background-image: url(../images/portfolio/bcd_project.jpg);
+        background-image: url(../images/portfolio/bcd_project2.jpg);
     }
     .header-two{
-        background-image: url(../images/portfolio/maitland_project.jpg);
+        background-image: url(../images/portfolio/maitland_project2.jpg);
     }
     .header-three{
-        background-image: url(../images/portfolio/core_project.jpg);
+        background-image: url(../images/portfolio/core_project2.jpg);
     }
     .header-four{
-        background-image: url(../images/portfolio/swat_project.jpg);
+        background-image: url(../images/portfolio/swat_project2.jpg);
     }
     .header-five{
-        background-image: url(../images/portfolio/codeconnect_project.jpg);
+        background-image: url(../images/portfolio/codeconnect_project2.jpg);
     }
     .header-six{
-        background-image: url(../images/portfolio/rgb_game_project.jpg);
+        background-image: url(../images/portfolio/rgb_game_project2.jpg);
     }
     .modal-title-container{
         background: rgba($text-secondary, .8);
@@ -152,6 +153,12 @@
 
     }
     &-content {
+        display: flex;
+        flex-direction: column;
+        text-align: left;
+        width: 75%;
+        margin: 0 auto;
+        padding-bottom: 2em;
         p{       
             font-size: 1rem;
             @media (max-width: 580px) {
@@ -165,11 +172,23 @@
                     border-bottom: 1px solid;
                 }
             }
+        }
+        .menu-close2{
+            align-self: center;
+            background: transparent;
+            color: $text-primary;
+            border: 1px solid $text-primary;
+            text-transform: uppercase;
+            font-family: $ff-headings;
+            padding: 1em;
+            border-radius: 5%;
+            margin-top: 1em;
+            &:hover,
+            &:focus {
+                background: $text-primary;
+                color: $white;
+            }
         }  
-        text-align: left;
-        width: 75%;
-        margin: 0 auto;
-        padding-bottom: 2em;
       }
   }
 
