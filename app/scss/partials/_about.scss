@@ -36,24 +36,6 @@
                 }
             }   
         }
-        .about__download {
-            display: block;
-            margin-top: 2em;
-            font-size: 0.875rem;
-            text-decoration: none;
-            font-family: $ff-headings;
-            text-transform: uppercase;
-            border: 1px solid $text-primary;
-            padding: 1em;
-            border-radius: 5%;
-            &:visited {
-                color: $text-primary
-            }
-            &:hover {
-                background-color: $text-primary;
-                color: $white;
-            }
-        }
 
         @media (max-width:1024px){
             flex-direction: column;
