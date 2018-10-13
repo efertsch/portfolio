@@ -120,22 +120,22 @@
         }
     }
     .header-one{
-        background-image: url(../images/portfolio/bcd_project.jpg);
+        background-image: url(../images/portfolio/bcd_project2.jpg);
     }
     .header-two{
-        background-image: url(../images/portfolio/maitland_project.jpg);
+        background-image: url(../images/portfolio/maitland_project2.jpg);
     }
     .header-three{
-        background-image: url(../images/portfolio/core_project.jpg);
+        background-image: url(../images/portfolio/core_project2.jpg);
     }
     .header-four{
-        background-image: url(../images/portfolio/swat_project.jpg);
+        background-image: url(../images/portfolio/swat_project2.jpg);
     }
     .header-five{
-        background-image: url(../images/portfolio/codeconnect_project.jpg);
+        background-image: url(../images/portfolio/codeconnect_project2.jpg);
     }
     .header-six{
-        background-image: url(../images/portfolio/rgb_game_project.jpg);
+        background-image: url(../images/portfolio/rgb_game_project2.jpg);
     }
     .modal-title-container{
         background: rgba($text-secondary, .8);
@@ -176,11 +176,14 @@
             align-self: center;
             background: transparent;
             color: $text-primary;
+            border: 1px solid $text-primary;
             text-transform: uppercase;
             font-family: $ff-headings;
             padding: 1em;
             border-radius: 5%;
-            &:hover {
+            margin-top: 1em;
+            &:hover,
+            &:focus {
                 background: $text-primary;
                 color: $white;
             }
