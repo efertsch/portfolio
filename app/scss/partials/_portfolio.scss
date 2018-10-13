@@ -152,6 +152,12 @@
 
     }
     &-content {
+        display: flex;
+        flex-direction: column;
+        text-align: left;
+        width: 75%;
+        margin: 0 auto;
+        padding-bottom: 2em;
         p{       
             font-size: 1rem;
             @media (max-width: 580px) {
@@ -165,11 +171,20 @@
                     border-bottom: 1px solid;
                 }
             }
+        }
+        .menu-close2{
+            align-self: center;
+            background: transparent;
+            color: $text-primary;
+            text-transform: uppercase;
+            font-family: $ff-headings;
+            padding: 1em;
+            border-radius: 5%;
+            &:hover {
+                background: $text-primary;
+                color: $white;
+            }
         }  
-        text-align: left;
-        width: 75%;
-        margin: 0 auto;
-        padding-bottom: 2em;
       }
   }
 
