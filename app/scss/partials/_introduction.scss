@@ -1,25 +1,19 @@
 .intro {
+    position: relative;
     background: $background-primary;
     height: 100vh;
     display: flex;
     align-items: center;
     justify-content: center;
+    .menu-button{
+        border: 0;
+        background: transparent;
+        position: absolute;
+        top: 2em;
+        left: 2em;
+    }
     &__heading {
         width: 60vw;
-        &::before,
-        &::after {
-            content: '';
-            display: block;
-            width: 40%;
-            height: 1px;
-            background-color: #002A3244; 
-        }
-        &::before{
-            margin: 0 auto 3em;
-        }
-        &::after {
-            margin: 3.5em auto 0;
-        }
         .intro__text {
             font-weight: 400;
             font-family: $ff-text;
@@ -35,6 +29,12 @@
                 &:hover {
                     border-bottom: 1px solid $text-primary;
                 }
+            }
+            @media (min-width:720px) and (max-width:950px){
+                font-size: 1.2rem;
+            }
+            @media (max-width: 720px){
+                font-size: 1rem;
             }
         }
     }

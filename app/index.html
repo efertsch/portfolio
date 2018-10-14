@@ -19,104 +19,237 @@
     
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.2.0/css/all.css" integrity="sha384-hWVjflwFxL6sNzntih27bfxkr27PmbbK/iSvJ+a4+0owXq79v+lsFkW54bOGbiDQ" crossorigin="anonymous">    
     <link rel="stylesheet" type="text/css" media="screen" href="css/main.css" />
-    
-    <script src="main.js"></script>
+
 </head>
-<body>
-    <!-- <header class="header">
+<body id="top">
+    <header class="header">
         <nav class="navigation">
             <ul>
-                <li class="navigation__item"><a class="navigation__link navigation__link--hover" id="logo" href="#">Logo</a></li>
-                <li class="navigation__item"><a class="navigation__link navigation__link--hover" href="#">About</a></li>
-                <li class="navigation__item"><a class="navigation__link navigation__link--hover" href="#">Work</a></li>
-                <li class="navigation__item"><a class="navigation__link navigation__link--hover" href="#">Contact</a></li>
+                <button class="menu-close"><i class="fa fa-times" aria-hidden="true"></i></button>
+                <li class="navigation__item"><a class="navigation__link navigation__link--hover" href="#home">Home</a></li>
+                <li class="navigation__item"><a class="navigation__link navigation__link--hover" href="#about">About</a></li>
+                <li class="navigation__item"><a class="navigation__link navigation__link--hover" href="#portfolio">Work</a></li>
+                <li class="navigation__item"><a class="navigation__link navigation__link--hover" href="#contact">Contact</a></li>
             </ul>
         </nav> 
-    </header>   -->
+    </header>  
 
     <div class="container">
+        <div id="modal-backdrop"></div>
         <main>
-            <section class="intro">
+            <section id="#home" class="intro">
+                <button class="menu-button">
+                    <i class="fas fa-bars fa-lg" aria-hidden="true"></i>
+                </button>
                 <div class="intro__heading">
                     <h1 class="intro__text">
-                        Hi, I'm <span class="intro__text--accent">Ethan</span>. I am an enthusiastic web developer with a special interest in front-end and UX. I am looking for new and challenging opportunities in the Greater Boston Area. 
-                        I spend my days making hard cider and leading lab ops at <a class="intro__link" href="https://www.farfromthetreecider.com">Far From The Tree Craft Cider</a>
-                        and my evenings working on a wide variety of personal and <a class="intro__link" href="#portfolio"> client projects</a>. <span><a class="intro__link" href="#about">Learn More.</a></span>
+                        Hi, I'm <span class="intro__text--accent">Ethan</span>. I am an enthusiastic front-end web developer and I am looking for new and challenging opportunities in the Greater Boston Area. 
+                        I spend my days fermenting tasty <a class="intro__link" href="https://www.farfromthetreecider.com">ciders</a> and my evenings building a variety of really fun <a class="intro__link" href="#portfolio">projects</a>. <span><a class="intro__link" href="#about">Get to know me</a> or download my <a class="intro__link"href="https://drive.google.com/file/d/17MgR0e61_z1sFbRfoPyeOn08_NlGiNcQ/view?usp=sharing">resumé.</a></span>       
                     </h1>
                 </div>
             </section> <!-- End intro section-->
 
-            <section id="about" class="about">
-                <header>
-                    <h1 class="about__title">Profile</h1>
-                </header>
-                <img class="about__image" src="#" alt="profile image">
-                <p class="about__description"></p>
-                <p class="about__description"></p>
-                <button class="about__resume-download"></button>
+            <section id="about">
+                <div class="about">
+                    <img class="about__image" src="images/profile.jpg" alt="profile image">
+                    <div class="about__wrapper">
+                        <h2 class="about__subtitle">A Passion for Code</h2>
+                        <p>I am an enthusiastic front-end developer, a recent technical bootcamp graduate, an innovative self-starter, and a passionate programmer. In both my personal and professional lives I have been labeled a cultural ambassador, a rhapsodic team leader, and an exemplary communicator. I strive to bring meaningful applications to life that reflect industry best practices and incorporate exceptional user experiences. </p>
+                    </div>
+                    <div class="about__wrapper">
+                        <h2 class="about__subtitle">A Passion for Life</h2>
+                        <p>I love to stretch myself and am constantly pushing my own boundaries; successes and failures alike, I seek to grow. My boundless curiosity and love for learning propel me to explore new ideas. Days off are spent sipping cocktails in resort wear, hanging out with my Jack Russell Terrier, dancing to the latest electronic groove tune, binge watching True Crime TV, and nearly everything in between.</p>
+                    </div>
+                </div>
             </section> <!-- End about section-->
 
             <section id="portfolio" class="portfolio">
                 <header>
-                    <h1 class="portfolio__title"></h1>
+                    <h1 class="portfolio__title">My Work</h1>
                 </header>
                 <div class="portfolio__items">
                     <figure class="portfolio__item">
-                        <img class="portfolio__image" src="#" alt="portfolio image 1">
-                        <figcaption>
-                            <h2 class="portfolio__item_title">Project Name</h2>
-                            <p class="portfolio__item_desc">A short description could go right here</p>
-                            <a href="#" class="portfolio__item_link">More info</a>
+                        <img class="portfolio__image featured" src="/images/portfolio/bcd_project.jpg" alt="portfolio image 1">
+                        <figcaption class="portfolio__caption">
+                            <h2 class="portfolio__item-title">Backcourt Dribble</h2>
+                            <p class="portfolio__item-desc">A platform for boosting fan egagement in women's sports</p>
+                            <button class="portfolio__item-button">More info<i class="fa fa-arrow-circle-o-right" aria-hidden="true"></i></button>
                         </figcaption>
+
+                        <!-- Portfolio modal 1 -->
+                        <div class="portfolio__modal">
+                            <div class="portfolio__modal-header header-one">
+                            <button class="menu-close"><i class="fa fa-times fa-2x" aria-hidden="true"></i></button>
+                                <div class="modal-title-container">
+                                    <h2 class="portfolio__item-title">Backcourt Dribble</h2>
+                                    <p class="portfolio__item-desc">A platform for boosting fan egagement in women's sports</p>
+                                </div>
+                            </div>
+                            <div class="portfolio__modal-content">
+                                <p>Backcourt Dribble began as a passion project for a Dev Bootcamp cohortmate, Denise Duffy, who reached out seeking help to bring her vision to life. This on-going venture began in February of 2018 and was a runner-up winner at the U.S. Soccer Hackathon in Chicago in July 2018. As the lead developer, I have touched every aspect of this project and worked throughout the tech stack. Additionally, I have assisted in developing the business model, generating ideas for features, and site design.</p>
+                                <p>Backcourt Dribble is a platform to boost fan engagement across women’s sports. Users can predict the outcome of matches and earn points for correct predictions, view leaderboards and personal score boards to compare their ranking against other users, engage with various relevant twitter integrations, and shop player-hosted experiences. </p>
+                                <p>This project is currently ongoing but you can check it out on <a href="https://github.com/femaleinventor/Backcourt_Dribble">GitHub</a> or see it live <a href="http://backcourtdribble.herokuapp.com/">here</a>.</p>
+                                <button class="menu-close2">Close Project</button>
+                            </div>
+                        </div> 
+                        <!-- /Portfolio modal 1 -->
+
                     </figure>
+
                     <figure class="portfolio__item">
-                        <img class="portfolio__image" src="#" alt="portfolio image 2">
-                        <figcaption>
-                            <h2 class="portfolio__item-title">Project Name</h2>
-                            <p class="portfolio__item-desc">A short description could go right here</p>
-                            <a href="#" class="portfolio__item-link">More info</a>
+                        <img class="portfolio__image" src="/images/portfolio/maitland_project.jpg" alt="portfolio image 2">
+                        <figcaption class="portfolio__caption">
+                            <h2 class="portfolio__item-title">Maitland Mountain Farm</h2>
+                            <p class="portfolio__item-desc">A site for a local urban farm and pickling company</p>
+                            <button class="portfolio__item-button">More info<i class="fa fa-arrow-circle-o-right" aria-hidden="true"></i></button>
                         </figcaption>
+
+                        <!-- Portfolio modal 2 -->
+                        <div class="portfolio__modal">
+                            <div class="portfolio__modal-header header-two">
+                            <button class="menu-close"><i class="fa fa-times fa-2x" aria-hidden="true"></i></button>
+                                <div class="modal-title-container">
+                                    <h2 class="portfolio__item-title">Maitland Mountain Farm</h2>
+                                    <p class="portfolio__item-desc">A site for a local urban farm and pickling company</p>
+                                </div>
+                            </div>
+                            <div class="portfolio__modal-content">
+                                <p>In the summer of 2017, I googled Maitland Mountain Farm after buying some of their products at the local Farmer’s Market only to find that they did not have an online presence outside of Facebook. I was well acquainted with the owner and after accepting part-time work helping them make pickles, I proposed that I build their website and consequently landed my first paid freelance gig! Over the course of the next several months, we worked together to craft a site that showcased their products, their passion, and their family.</p>
+                                <p>Maitland Mountain Farm is an urban farm and pickling company based in Salem, MA. The site allows users to learn about the farm and their pickled goods. Visitors can also learn more about where to buy their products, and read about the farm’s recent features in the media.</p>
+                                <p>You can view the site live <a href="www.maitlandfarms.com">here</a> or check out the source code on <a href="https://github.com/efertsch/Maitland-Mountain-Farm">Github</a>.</p>
+                                <button class="menu-close2">Close Project</button>
+                            </div>
+                        </div> 
+                        <!-- /Portfolio modal 2 -->
                     </figure>
+
                     <figure class="portfolio__item">
-                        <img class="portfolio__image" src="#" alt="portfolio image 3">
-                        <figcaption>
-                            <h2 class="portfolio__item-title">Project Name</h2>
-                            <p class="portfolio__item-desc">A short description could go right here</p>
-                            <a href="#" class="portfolio__item-link">More info</a>
+                        <img class="portfolio__image" src="/images/portfolio/core_project.jpg" alt="portfolio image 3">
+                        <figcaption class="portfolio__caption">
+                            <h2 class="portfolio__item-title">Core</h2>
+                            <p class="portfolio__item-desc">An app for tracking cider fermentation</p>
+                            <button class="portfolio__item-button">More info<i class="fa fa-arrow-circle-o-right" aria-hidden="true"></i></button>
                         </figcaption>
+
+                        <!-- Portfolio modal 3 -->
+                        <div class="portfolio__modal">
+                            <div class="portfolio__modal-header header-three">
+                            <button class="menu-close"><i class="fa fa-times fa-2x" aria-hidden="true"></i></button>
+                                <div class="modal-title-container">
+                                    <h2 class="portfolio__item-title">Core</h2>
+                                    <p class="portfolio__item-desc">An app for tracking cider fermentation</p>
+                                </div>
+                            </div>
+                            <div class="portfolio__modal-content">
+                                <p>In January of 2018 I began working full-time as a cider maker at Far From the Tree, a craft hard cider company in Salem, MA. Having been trained as a Biologist, I was quick to point out the importance of collecting data and maintaining records throughout the product lifecycle. I built the laboratory program and began tracking cider data using google sheets and charts. After several months, the workflow and querying became cumbersome. I researched affordable software and couldn’t find anything that would fit our operation so I decided to build it myself. </p>
+                                <p>Core is an app for collecting, maintaining, and analyzing data associated hard cider production on a small scale. This tool is particularly useful for craft cider houses or hobbyists who may not be able to afford other costly, commercial-scale software. It is also useful for those interested in tracking various laboratory functions typically involved in the fermentation and stabilization processes. A user can record data to track the fermentation process from start to finish, schedule experiments, and view analytics.</p>
+                                <p>This project is currently ongoing but the source code can be viewed on <a href="https://github.com/efertsch/far-from-the-tree">Github</a>.</p>
+                                <button class="menu-close2">Close Project</button>
+                            </div>
+                        </div> 
+                        <!-- /Portfolio modal 3 -->
                     </figure>
+
                     <figure class="portfolio__item">
-                        <img class="portfolio__image" src="#" alt="portfolio image 4">
-                        <figcaption>
-                            <h2 class="portfolio__item-title">Project Name</h2>
-                            <p class="portfolio__item-desc">A short description could go right here</p>
-                            <a href="#" class="portfolio__item-link">More info</a>
+                        <img class="portfolio__image" src="/images/portfolio/swat_project.jpg" alt="portfolio image 4">
+                        <figcaption class="portfolio__caption">
+                            <h2 class="portfolio__item-title">Swat</h2>
+                            <p class="portfolio__item-desc">An app that crowd sources greenhead fly sightings along the Massachusetts coast</p>
+                            <button class="portfolio__item-button">Coming soon<i class="fas fa-wrench" aria-hidden="true"></i></button>
                         </figcaption>
+
+                        <!-- Portfolio modal 4 -->
+                        <div class="portfolio__modal">
+                            <div class="portfolio__modal-header header-four">
+                            <button class="menu-close"><i class="fa fa-times fa-2x" aria-hidden="true"></i></button>
+                                <div class="modal-title-container">
+                                    <h2 class="portfolio__item-title">Swat</h2>
+                                    <p class="portfolio__item-desc">An app that crowd sources greenhead fly sightings along the Massachusetts coast</p>
+                                </div>
+                            </div>
+                            <div class="portfolio__modal-content">
+                                <p>If you have ever been to a beach in New England in July, you will understand how valuable a resource this platform is. Greenheads are biting flies produced in coastal marshes and appear en mass for several weeks each summer. These flies are extremely difficult to repel and often result in a significant loss of revenue for recreational areas, as the flies cause a decline in visitor attendance. Additionally, many people have severe allergic reactions to the bite of the flies. As an avid beach goer, I have been disappointed in my search of a service that will alert me if flies have been spotted in my area. </p>
+                                <p>Swat is platform that uses crowd-sourced information to track green-head fly sightings on the coast of Massachusetts. A user will be able to log on to the app, select a beach, wetland, or park in Massachusetts, drop a pin, and add comments about the location and severity of the fly population.</p>
+                                <p>This project is currently in the planning stages.</p>
+                                <button class="menu-close2">Close Project</button>
+                            </div>
+                        </div> 
+                        <!-- /Portfolio modal 4 -->
                     </figure>
+
                     <figure class="portfolio__item">
-                        <img class="portfolio__image" src="#" alt="portfolio image 5">
-                        <figcaption>
-                            <h2 class="portfolio__item-title">Project Name</h2>
-                            <p class="portfolio__item-desc">A short description could go right here</p>
-                            <a href="#" class="portfolio__item-link">More info</a>
+                        <img class="portfolio__image" src="/images/portfolio/codeconnect_project.jpg" alt="portfolio image 5">
+                        <figcaption class="portfolio__caption">
+                            <h2 class="portfolio__item-title">Code Connect</h2>
+                            <p class="portfolio__item-desc">A job board that connects bootcamp graduates to employers</p>
+                            <button class="portfolio__item-button">More info<i class="fa fa-arrow-circle-o-right" aria-hidden="true"></i></button>
                         </figcaption>
+
+                        <!-- Portfolio modal 5 -->
+                        <div class="portfolio__modal">
+                            <div class="portfolio__modal-header header-five">
+                            <button class="menu-close"><i class="fa fa-times fa-2x" aria-hidden="true"></i></button>
+                                <div class="modal-title-container">
+                                    <h2 class="portfolio__item-title">CodeConnect</h2>
+                                    <p class="portfolio__item-desc">A job board that connects bootcamp graduates to employers</p>
+                                </div>
+                            </div>
+                            <div class="portfolio__modal-content">
+                                <p>CodeConnect was the brain child of Dev Bootcamp students who were nearing the completion of the program. Bootcamps are emerging as a popular and effective way to become a developer and we wanted to create a space that could connect potential employers seeking diverse and unique talent to graduates. As the capstone project at Dev Bootcamp, the team was given seven days to bring this concept to life. I worked as a full-stack developer on this project and served as the point person for solving interpersonal issues among team members.</p>
+                                <p>CodeConnect is a job board for bootcamp graduates. A recent grad can log on and search for contracted employers seeking help in their region. Graduates have a profile and can upload their resumes, track their profile views, and keep in touch with cohort mates post-graduation with an in-app messaging system. Employers can search for candidates through the app.</p>
+                                <p>This project is hosted on <a href="http://code-connect-dbc.herokuapp.com/">Heroku</a> and you can check out the source code on <a href="https://github.com/kimberlyjoyceembry/DBC-final-project">Github</a>.</p>
+                                <button class="menu-close2">Close Project</button>
+                            </div>
+                        </div> 
+                        <!-- /Portfolio modal 5 -->
+                    </figure>
+
+                    <figure class="portfolio__item">
+                        <img class="portfolio__image" src="/images/portfolio/rgb_game_project.jpg" alt="portfolio image 6">
+                        <figcaption class="portfolio__caption">
+                            <h2 class="portfolio__item-title">RGB Color Game</h2>
+                            <p class="portfolio__item-desc">A color matching game that helps users understand rgb values</p>
+                            <button class="portfolio__item-button">More info<i class="fa fa-arrow-circle-o-right" aria-hidden="true"></i></button>
+                        </figcaption>
+
+                        <!-- Portfolio modal 6 -->
+                        <div class="portfolio__modal">
+                            <div class="portfolio__modal-header header-six">
+                            <button class="menu-close"><i class="fa fa-times fa-2x" aria-hidden="true"></i></button>
+                                <div class="modal-title-container">
+                                    <h2 class="portfolio__item-title">RGB Color Game</h2>
+                                    <p class="portfolio__item-desc">A color matching game that helps users understand rgb values</p>
+                                </div>
+                            </div>
+                            <div class="portfolio__modal-content">
+                                <p>This project was built while taking "The Web Developer Bootcamp" offered by Udemy and taught by Colt Steele. At the time my experience was primarily in the backend and I lacked understanding of color theory and was largely unaware of the different types of color values used in CSS (I had primarily been using Hex Codes and color pickers). Building this game allowed me to explore a different means of working with color and understand the benefits of using different color declarations.</p>
+                                <p>The RGB Color Game is a memory game built to help users become familiar with RGB color values.  The game is initialized with a grid of colored tiles, one of which is selected as the target or "winning" color. The RGB value of said color is displayed at the top of the page. The user's goal is to match the corresponding colored tile to the RGB value.</p>
+                                <p>You can check out the source code on <a href="https://github.com/efertsch/RGB-Guessing-Game">Github</a>.</p>
+                                <button class="menu-close2">Close Project</button>
+                            </div>
+                        </div> 
+                        <!-- /Portfolio modal 6 -->
                     </figure>
                 </div>
             </section> <!-- End portfolio section-->
+
         </main> <!-- End main content -->
 
         <footer>
-            <section class="contact">
-                <p class="contact__description"> Have an idea for how we can make something awesome together? Let's grab a drink, talk shop over lunch, or if you prefer a more traditional approach shoot me and <a href="mailto:efertsch@gmail.com">email</a> or find me on <a href="https://www.linkedin.com/in/ethan-fertsch">linkedin.</a> </p>
-            </section>
-            <section class="social">
-                <i class="social__icon social__icon--hover fa fa-github" aria-hidden="true"></i>
-                <i class="social__icon social__icon--hover fa fa-linkedin" aria-hidden="true"></i>
+            <section id="contact" class="contact target">
+                <p class="contact__description"> Interested in making something awesome together? Let's grab a drink, talk shop over lunch, or if you prefer a more traditional approach shoot me and <a class="contact__description--link" href="mailto:efertsch@gmail.com">email</a> or find me on <a class="contact__description--link" href="https://www.linkedin.com/in/ethan-fertsch">linkedin.</a> </p>
+                <section class="social">
+                    <a href="https://github.com/efertsch"><i class="social__icon social__icon--hover fa fa-github" aria-hidden="true"></i></a>
+                    <a href="https://www.linkedin.com/in/ethan-fertsch"><i class="social__icon social__icon--hover fa fa-linkedin" aria-hidden="true"></i></a>
+                    <a href="https://www.instagram.com/e.cole.f"><i class="social__icon social__icon--hover fa fa-instagram" aria-hidden="true"></i></a>
+                </section>
             </section>
         </footer> <!-- End footer-->
 
     </div> <!-- End container-->
-
+    <!-- <script src="js/nav.js"></script> 
+    <script src="js/modal.js"></script>  -->
+    <script src="/dist/js/main.min.js"></script> 
     <script src="https://use.fontawesome.com/09bd5cc1fc.js"></script>
 </body>
 </html>

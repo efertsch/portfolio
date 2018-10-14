@@ -1,0 +1,43 @@
+.contact{
+    background: $background-tertiary;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    &__description{
+        width: 60vw;
+        font-weight: 400;
+        line-height: 1.5;
+        text-align: center;
+        &--link{
+            text-decoration: none;
+            color: $text-primary;
+            border-bottom: 1px dotted $text-primary;
+            &:hover {
+                border-bottom: 1px solid $text-primary;
+            }
+        }
+        @media (min-width:720px) and (max-width:950px){
+            font-size: 1.2rem;
+        }
+        @media (max-width: 720px){
+            font-size: 1rem;
+        }
+    }
+    .social{
+        position: relative;
+        &__icon{
+            color: $text-primary;
+            margin: 0.5em;
+            &:hover{
+                color: $text-secondary; 
+            }
+            @media (min-width:720px) {
+                transform: scale(1.5);
+            }
+        }
+        
+    }
+    
+}

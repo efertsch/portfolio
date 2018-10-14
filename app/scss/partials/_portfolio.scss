@@ -1,0 +1,194 @@
+.container {
+    position: relative; 
+    #modal-backdrop{
+        height: 100%;
+        width: 100%;
+        position: absolute;  
+        background: rgba(black, 0.5);
+        display: none;
+        z-index: 9;
+    }
+}
+
+.portfolio{
+    text-align: center;
+    background-color: $background-primary;
+    padding: 5em 0;
+    &__title{
+        font-size: 1.5rem;
+        color: $text-primary;
+        text-transform: uppercase;
+        letter-spacing: 0.2rem;
+        margin-bottom: 2em;
+    }
+    &__items{
+        @extend %container;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        .portfolio__item{
+            position: relative;
+            overflow: hidden;
+            height: 18.75em;
+            flex: 1 1 20rem;
+            .portfolio__image{
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+            }
+            figcaption{
+                position: absolute;
+                top:100%;
+                bottom:0;
+                right:0;
+                left:0;
+                background: rgba($text-secondary, .7);
+                text-align: left;
+                display: flex;
+                flex-direction: column;
+                padding: 2em;
+                transition: top ease-in-out 300ms;
+            }
+            &:hover figcaption,
+            &:focus figcaption{
+                top:0;
+            }
+            &-title{
+                color: $white;
+                font-size: 1.5rem;
+                font-family: $ff-headings;
+                text-transform: uppercase;
+                letter-spacing: 0.2rem;
+                margin-bottom: auto;
+            }
+            &-desc{
+                color: $white;
+                font-size: 1rem;
+            }
+            &-button{
+                align-self: flex-start;
+                text-transform: uppercase;
+                background: transparent;
+                color: $white;
+                padding: 1em;
+                border-radius: 5%;
+                i{
+                    margin-left: .5em;
+                }
+                &:hover{
+                    background: $white;
+                    color: $text-primary;  
+                }
+            }
+        }
+    }
+}
+
+
+.portfolio__modal {
+    max-width: 600px;
+    margin: 0 auto;
+    position: fixed;
+    z-index: 10;
+    top: 2em;
+    bottom: 2em;
+    left: 2em;
+    right: 2em;
+    background: $white;
+    border-radius: 1%;
+    overflow-y: scroll;
+    overflow-x: hidden;
+    display: none;
+  
+    &.is-open {
+      display: block;
+    }
+    
+    &-header{
+        text-align: left;
+        padding: 5em 0;
+        margin-bottom: 2em;
+        background-size: cover;
+        background-position: center;
+        position: relative;
+        .menu-close{
+            border: 0;
+            background: transparent;
+            position: absolute;
+            top: 1em;
+            right: 1em;
+            cursor: pointer;
+        }
+    }
+    .header-one{
+        background-image: url(../images/portfolio/bcd_project2.jpg);
+    }
+    .header-two{
+        background-image: url(../images/portfolio/maitland_project2.jpg);
+    }
+    .header-three{
+        background-image: url(../images/portfolio/core_project2.jpg);
+    }
+    .header-four{
+        background-image: url(../images/portfolio/swat_project2.jpg);
+    }
+    .header-five{
+        background-image: url(../images/portfolio/codeconnect_project2.jpg);
+    }
+    .header-six{
+        background-image: url(../images/portfolio/rgb_game_project2.jpg);
+    }
+    .modal-title-container{
+        background: rgba($text-secondary, .8);
+        padding: 3em 0 3em 2em;
+        width: 80%;
+        .portfolio__item-title{
+            font-size: 1.2rem;
+             display: inline-block;
+        }
+        .portfolio__item-desc{
+            font-size: 0.875rem;
+            display: inline-block; 
+        }
+
+    }
+    &-content {
+        display: flex;
+        flex-direction: column;
+        text-align: left;
+        width: 75%;
+        margin: 0 auto;
+        padding-bottom: 2em;
+        p{       
+            font-size: 1rem;
+            @media (max-width: 580px) {
+                font-size: 0.875rem;
+            }
+            a {
+                color: $text-primary;
+                text-decoration: none;
+                border-bottom: 1px dotted;
+                &:hover {
+                    border-bottom: 1px solid;
+                }
+            }
+        }
+        .menu-close2{
+            align-self: center;
+            background: transparent;
+            color: $text-primary;
+            border: 1px solid $text-primary;
+            text-transform: uppercase;
+            font-family: $ff-headings;
+            padding: 1em;
+            border-radius: 5%;
+            margin-top: 1em;
+            &:hover,
+            &:focus {
+                background: $text-primary;
+                color: $white;
+            }
+        }  
+      }
+  }
+
