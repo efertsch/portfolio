@@ -24,11 +24,9 @@
     "gulp-sass": "^4.0.1",
     "gulp-uglify": "^3.0.0",
     "gulp-useref": "^3.1.5",
+    "jump.js": "^1.0.2",
     "run-sequence": "^2.2.1",
     "sass": "^1.10.0"
   },
-  "dependencies": {
-    "jump.js": "^1.0.2",
-    "rellax": "^1.7.0"
-  }
+  "dependencies": {}
 }
