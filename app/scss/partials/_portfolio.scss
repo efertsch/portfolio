@@ -1,9 +1,9 @@
 .container {
-    position: relative; 
+    position: relative;
     #modal-backdrop{
         height: 100%;
         width: 100%;
-        position: absolute;  
+        position: absolute;
         background: rgba(black, 0.5);
         display: none;
         z-index: 9;
@@ -77,7 +77,7 @@
                 }
                 &:hover{
                     background: $white;
-                    color: $text-primary;  
+                    color: $text-primary;
                 }
             }
         }
@@ -99,11 +99,11 @@
     overflow-y: scroll;
     overflow-x: hidden;
     display: none;
-  
+
     &.is-open {
       display: block;
     }
-    
+
     &-header{
         text-align: left;
         padding: 5em 0;
@@ -124,19 +124,19 @@
         background-image: url(../images/portfolio/bcd_project2.jpg);
     }
     .header-two{
-        background-image: url(../images/portfolio/maitland_project2.jpg);
+        background-image: url(../images/portfolio/greenscapes_project2.jpg);
     }
     .header-three{
-        background-image: url(../images/portfolio/core_project2.jpg);
+        background-image: url(../images/portfolio/maitland_project2.jpg);
     }
     .header-four{
-        background-image: url(../images/portfolio/swat_project2.jpg);
+        background-image: url(../images/portfolio/core_project2.jpg);
     }
     .header-five{
-        background-image: url(../images/portfolio/codeconnect_project2.jpg);
+        background-image: url(../images/portfolio/swat_project2.jpg);
     }
     .header-six{
-        background-image: url(../images/portfolio/rgb_game_project2.jpg);
+        background-image: url(../images/portfolio/codeconnect_project2.jpg);
     }
     .modal-title-container{
         background: rgba($text-secondary, .8);
@@ -148,7 +148,7 @@
         }
         .portfolio__item-desc{
             font-size: 0.875rem;
-            display: inline-block; 
+            display: inline-block;
         }
 
     }
@@ -159,7 +159,7 @@
         width: 75%;
         margin: 0 auto;
         padding-bottom: 2em;
-        p{       
+        p{
             font-size: 1rem;
             @media (max-width: 580px) {
                 font-size: 0.875rem;
@@ -188,7 +188,6 @@
                 background: $text-primary;
                 color: $white;
             }
-        }  
+        }
       }
   }
-
